@@ -13,6 +13,7 @@
 		9110ABA12718482B00C58F72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9110AB9F2718482B00C58F72 /* Main.storyboard */; };
 		9110ABA32718483000C58F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9110ABA22718483000C58F72 /* Assets.xcassets */; };
 		9110ABA62718483000C58F72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9110ABA42718483000C58F72 /* LaunchScreen.storyboard */; };
+		9110ABAE2718484F00C58F72 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9110ABAD2718484F00C58F72 /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9110ABA22718483000C58F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9110ABA52718483000C58F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9110ABA72718483000C58F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9110ABAD2718484F00C58F72 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				9110ABA22718483000C58F72 /* Assets.xcassets */,
 				9110ABA42718483000C58F72 /* LaunchScreen.storyboard */,
 				9110ABA72718483000C58F72 /* Info.plist */,
+				9110ABAD2718484F00C58F72 /* FlowerClassifier.mlmodel */,
 			);
 			path = OxfordFlowerClassifier;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9110ABAE2718484F00C58F72 /* FlowerClassifier.mlmodel in Sources */,
 				9110AB9E2718482A00C58F72 /* ViewController.swift in Sources */,
 				9110AB9A2718482A00C58F72 /* AppDelegate.swift in Sources */,
 				9110AB9C2718482A00C58F72 /* SceneDelegate.swift in Sources */,
