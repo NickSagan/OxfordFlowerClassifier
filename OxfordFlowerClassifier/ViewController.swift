@@ -14,6 +14,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
+    let engine = FlowerModelEngine()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 fatalError("Can't convert UIImage into CIImage")
             }
             
-            detect(image: ciImage)
+            self.title = engine.detect(image: ciImage)
 
         }
         
@@ -47,29 +48,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func libraryPressed(_ sender: UIBarButtonItem) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func detect(image: CIImage){
-        
-        guard let model = try? VNCoreMLModel(for: FlowerClassifier().model) else {
-            fatalError("Loading CoreML model failed")
-        }
-        
-        let request = VNCoreMLRequest(model: model) { (request, error) in
-            guard let results = request.results as? [VNClassificationObservation] else {
-                fatalError("Model failed to process image")
-            }
-            
-            let result = results.first?.identifier.capitalized
-            self.navigationItem.title = result
-        }
-        let handler = VNImageRequestHandler(ciImage: image)
-        
-        do {
-            try handler.perform([request])
-        } catch {
-            print(error)
-        }
     }
     
 }
